@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact | Blissful Strokes — Shabari Khaire</title>
-<meta name="description" content="Contact Shabari Khaire about available paintings, photography prints, commissions, exhibitions and collaborations.">
+<meta name="description" content="Contact Shabari Khaire about available paintings, prints, commissions, exhibitions and collaborations.">
 <link rel="canonical" href="https://www.blissfulstrokes.com/contact.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Blissful Strokes">
 <meta property="og:title" content="Contact | Blissful Strokes — Shabari Khaire">
-<meta property="og:description" content="Contact Shabari Khaire about available paintings, photography prints, commissions, exhibitions and collaborations.">
+<meta property="og:description" content="Contact Shabari Khaire about available paintings, prints, commissions, exhibitions and collaborations.">
 <meta property="og:url" content="https://www.blissfulstrokes.com/contact.html">
 <meta property="og:image" content="https://www.blissfulstrokes.com/images/hero/hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -34,7 +34,6 @@
     <nav class="nav" id="primary-nav" aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="paintings.html">Paintings</a>
-      <a href="photography.html">Photography</a>
       <a href="about.html">About</a>
       <a href="galleries.html">For Galleries</a>
       <a href="contact.html" aria-current="page">Contact</a>
@@ -52,11 +51,12 @@
           <p class="lede">For enquiries about available work, commissions, prints, exhibitions, or collaborations &mdash; I would love to hear from you.</p>
 
           <!--
-            FORMSPREE SETUP (free): create a form at https://formspree.io, then replace
-            YOUR_FORM_ID below with the id it gives you. Until then the form will not send.
-            Alternative: delete the <form> and keep only the email link below it.
+            FORMSPREE: replace YOUR_HASHID with the 8-character id from the endpoint
+            Formspree shows after you create the form (https://formspree.io/f/<hashid>).
+            Free plan = 50 submissions/month. The destination email must be verified in
+            Formspree or nothing is delivered. The email block below works regardless.
           -->
-          <form class="form mt-lg" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <form class="form mt-lg" id="contact-form" action="https://formspree.io/f/mkjgakel" method="POST">
             <div class="field">
               <label for="name">Name</label>
               <input id="name" name="name" type="text" autocomplete="name" required>
@@ -83,12 +83,22 @@
             <div class="btn-row" style="margin-top:0.5rem;">
               <button class="btn btn--solid" type="submit">Send message</button>
             </div>
+            <p class="form-status" role="status" aria-live="polite" hidden></p>
           </form>
 
-          <p class="form-note mt-lg">Prefer email? Write to <a href="mailto:shabarikhaire@gmail.com">shabarikhaire@gmail.com</a>.</p>
+          <div class="mt-lg">
+            <p class="eyebrow">Helpful to include</p>
+            <ul class="plain-list">
+              <li>Which piece or series you are writing about</li>
+              <li>For exhibitions &mdash; the venue, dates and the kind of work you are looking for</li>
+              <li>For commissions &mdash; rough size, medium and timeline</li>
+            </ul>
+          </div>
+
+          <p class="form-note mt-lg">Based in Massachusetts, USA. I read every message and usually reply within a few days.</p>
         </div>
         <div class="reveal">
-          <img class="story__portrait" src="images/paintings/painting-03.jpg" data-slot="images/paintings/painting-03.jpg" loading="lazy" alt="Painting by Shabari Khaire">
+          <img class="story__portrait" src="images/paintings/october-glow.jpg" loading="lazy" alt="Painting by Shabari Khaire">
         </div>
       </div>
     </div>
@@ -106,7 +116,6 @@
         <h3>Explore</h3>
         <ul>
           <li><a href="paintings.html">Paintings</a></li>
-          <li><a href="photography.html">Photography</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
       </div>
@@ -127,7 +136,7 @@
       </div>
     </div>
     <div class="site-footer__bottom">
-      <span>&copy; <span id="year">2026</span> Shabari Khaire. All artwork and photographs are the artist&rsquo;s own.</span>
+      <span>&copy; <span id="year">2026</span> Shabari Khaire. All artwork is the artist&rsquo;s own.</span>
       <span>Blissful Strokes</span>
     </div>
   </div>

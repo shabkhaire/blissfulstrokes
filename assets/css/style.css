@@ -195,6 +195,7 @@ h1, h2, h3, .serif {
 .hero__figure { margin: 0; }
 .hero__media {
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   background: var(--cream-deep);
@@ -210,6 +211,40 @@ figcaption.caption {
   margin-top: 1rem;
   text-align: center;
 }
+
+/* --- Series jump nav (paintings page) ------------------------------------ */
+
+.series-nav {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  position: sticky;
+  top: var(--header-h, 72px);
+  z-index: 20;
+  background: color-mix(in srgb, var(--cream) 94%, transparent);
+  backdrop-filter: saturate(140%) blur(10px);
+}
+.series-nav .wrap {
+  display: flex;
+  gap: clamp(1rem, 2.4vw, 2.25rem);
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-block: 0.9rem;
+}
+.series-nav .wrap::-webkit-scrollbar { display: none; }
+.series-nav a {
+  flex: none;
+  text-decoration: none;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+.series-nav a:hover { color: var(--ink); }
+
+/* Section anchors must clear both sticky bars. */
+.section[id] { scroll-margin-top: calc(var(--header-h, 72px) + 3.5rem); }
 
 /* --- Galleries ----------------------------------------------------------- */
 
@@ -230,16 +265,16 @@ figcaption.caption {
   background: var(--cream-deep);
   cursor: zoom-in;
 }
+/* No forced aspect-ratio and no object-fit: each painting keeps its own
+   proportions, so nothing is ever cropped. The width/height attributes on the
+   <img> reserve the right space before it loads, so the layout doesn't jump.
+   Rows end up uneven by design — the work decides its shape, not the grid. */
 .piece__img {
   width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+  height: auto;
   transition: transform 0.7s cubic-bezier(0.2, 0, 0.2, 1), opacity 0.4s ease;
 }
 .piece__link:hover .piece__img { transform: scale(1.035); }
-
-.piece--landscape .piece__img { aspect-ratio: 3 / 2; }
-.piece--square .piece__img { aspect-ratio: 1 / 1; }
 
 .piece__meta { margin-top: 0.9rem; }
 .piece__title { font-family: var(--serif); font-size: 1.2rem; }
@@ -250,18 +285,33 @@ figcaption.caption {
   margin: 0.25rem 0 0;
 }
 
+/* Availability marker, e.g. Sold. Quiet by design — it is a fact about the
+   work, not a sales badge. */
+.piece__status {
+  display: inline-block;
+  margin: 0.55rem 0 0;
+  padding: 0.18rem 0.5rem;
+  border: 1px solid var(--rule);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
 /* --- Story --------------------------------------------------------------- */
 
 .story { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2.5rem, 6vw, 6rem); align-items: start; }
 @media (max-width: 900px) { .story { grid-template-columns: 1fr; } }
 
-/* Tall slot — suits a standing portrait. object-position keeps the face and the
-   artwork behind it in frame rather than centring on the midriff. */
+/* Landscape slot, matching the portrait photo's own ratio so the artwork beside
+   her stays in frame. Also used for the side image on the contact page. */
 .story__portrait {
   width: 100%;
-  aspect-ratio: 2 / 3;
+  height: auto;
+  aspect-ratio: 491 / 424;
   object-fit: cover;
-  object-position: center 22%;
+  object-position: center center;
   background: var(--cream-deep);
 }
 .story__body p { max-width: 58ch; color: var(--ink-soft); }
@@ -316,7 +366,7 @@ figcaption.caption {
 
 .panel { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(2.5rem, 6vw, 5.5rem); align-items: center; }
 @media (max-width: 900px) { .panel { grid-template-columns: 1fr; } }
-.panel__media { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: var(--cream); }
+.panel__media { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; background: var(--cream); }
 
 /* --- Contact form -------------------------------------------------------- */
 
@@ -346,6 +396,40 @@ figcaption.caption {
 .field textarea { resize: vertical; min-height: 8rem; }
 
 .form-note { font-size: 0.82rem; color: var(--ink-faint); }
+
+.form-status {
+  font-size: 0.9rem;
+  margin: 0.5rem 0 0;
+  padding: 0.85rem 1rem;
+  border-left: 2px solid var(--accent);
+  background: var(--cream-deep);
+}
+.form-status--ok { border-left-color: #4f6f52; }
+.form-status--err { border-left-color: #9c4a3c; }
+
+.plain-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+  max-width: 48ch;
+}
+.plain-list li {
+  position: relative;
+  padding-left: 1.1rem;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+.plain-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.75em;
+  width: 5px;
+  height: 1px;
+  background: var(--accent);
+}
 
 /* --- Footer -------------------------------------------------------------- */
 

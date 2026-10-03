@@ -3,7 +3,6 @@
 # macOS only — uses the built-in `sips`. No installs needed.
 #
 #   ./add-images.sh paintings  ~/Desktop/my-paintings
-#   ./add-images.sh photography ~/Desktop/my-photos
 #   ./add-images.sh hero       ~/Desktop/best-painting.jpg
 #   ./add-images.sh portrait   ~/Desktop/me.jpg
 #
@@ -31,9 +30,9 @@ optimise() {  # optimise <src> <dest> <max-edge>
 }
 
 case "$KIND" in
-  paintings|photography)
+  paintings)
     [[ -d "$SRC" ]] || { echo "Not a directory: $SRC" >&2; exit 1; }
-    prefix=$([[ "$KIND" == paintings ]] && echo painting || echo photo)
+    prefix=painting
     n=0
     while IFS= read -r f; do
       n=$((n + 1))

@@ -2,3 +2,8 @@
 *.log
 build.log
 information.txt
+
+# Source originals: 143 MB, and the matted scans still carry the burned-in
+# size/price text that was deliberately cropped out of images/paintings/.
+# Kept locally as the archive; not published.
+photo/Shabari painting/

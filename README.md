@@ -1,12 +1,11 @@
 # Blissful Strokes — www.blissfulstrokes.com
 
-Static site (plain HTML/CSS/JS, no build step) for Shabari Khaire, artist & photographer.
+Static site (plain HTML/CSS/JS, no build step) for Shabari Khaire, artist & painter.
 Designed to be hosted free on GitHub Pages with DNS on Cloudflare.
 
 ```
-index.html          Home — hero, featured paintings, photography, My Story, For Galleries
+index.html          Home — hero, featured paintings, My Story, For Galleries
 paintings.html      Full painting portfolio (12 slots)
-photography.html    Full photography portfolio (8 slots)
 about.html          My Story
 galleries.html      For Galleries & Art Professionals
 contact.html        Contact form + email
@@ -33,11 +32,9 @@ Filenames the site expects:
 | Hero (full-width, wide crop) | `images/hero/hero.jpg` |
 | Portrait of the artist | `images/portrait.jpg` |
 | Paintings | `images/paintings/painting-01.jpg` … `painting-12.jpg` |
-| Photography | `images/photography/photo-01.jpg` … `photo-08.jpg` |
 | Artist CV | `files/shabari-khaire-artist-cv.pdf` |
 
-The first six paintings and first four photographs are the ones shown on the
-home page.
+The first six paintings are the ones shown on the home page.
 
 The helper script copies, resizes and compresses in one go (macOS, no installs):
 
@@ -46,15 +43,14 @@ chmod +x add-images.sh
 ./add-images.sh hero        ~/Desktop/best-painting.jpg
 ./add-images.sh portrait    ~/Desktop/shabari.jpg
 ./add-images.sh paintings   ~/Desktop/paintings-folder
-./add-images.sh photography ~/Desktop/photos-folder
 ```
 
 Source files are used in filename order, so prefix them `01-`, `02-`, … to set
 the order on the site.
 
-Then edit the titles, medium and dimensions in `index.html`, `paintings.html`
-and `photography.html` — search for `Painting 01` / `Photograph 01`. Delete any
-`<figure class="piece">` block you don't have an image for.
+Then edit the titles, medium and dimensions in `index.html` and `paintings.html`
+— search for `Painting 01`. Delete any `<figure class="piece">` block you don't
+have an image for.
 
 ## 2. Preview locally
 
@@ -63,14 +59,15 @@ python3 -m http.server 8080
 # open http://localhost:8080
 ```
 
-## 3. Turn on the contact form
+## 3. Contact form
 
-The form posts to [Formspree](https://formspree.io) (free tier). Create a form
-there, then in `contact.html` replace `YOUR_FORM_ID` in the `action` URL. Until
-you do, the form will not send — the email link below it still works.
+The form posts to [Formspree](https://formspree.io) form `mkjgakel` (free plan,
+50 submissions/month) and submits via fetch so the visitor stays on the page.
+The destination address must be verified in the Formspree dashboard or
+submissions are accepted and then dropped.
 
-Also replace the placeholder email `shabarikhaire@gmail.com` and the
-Instagram URL (`https://www.instagram.com/`) across all pages if they differ.
+The Instagram URL (`https://www.instagram.com/`) is still a placeholder — update
+it in the footer of every page.
 
 ## 4. Publish to GitHub Pages
 

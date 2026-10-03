@@ -61,6 +61,50 @@
     img.addEventListener('error', mark);
   });
 
+  /* ---- Contact form: submit in place ------------------------------------
+     Formspree's own "custom thank-you page" is a paid feature, but posting via
+     fetch and showing the result inline is not — so the visitor never leaves
+     the site. If JS is off the form still posts normally. */
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm && !contactForm.action.includes('YOUR_HASHID')) {
+    const status = contactForm.querySelector('.form-status');
+    const submit = contactForm.querySelector('button[type=submit]');
+
+    const say = (msg, ok) => {
+      status.textContent = msg;
+      status.hidden = false;
+      status.classList.toggle('form-status--ok', ok);
+      status.classList.toggle('form-status--err', !ok);
+    };
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const original = submit.textContent;
+      submit.disabled = true;
+      submit.textContent = 'Sending…';
+      try {
+        const res = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { Accept: 'application/json' },
+        });
+        if (res.ok) {
+          contactForm.reset();
+          say('Thank you — your message has been sent. I will be in touch soon.', true);
+        } else {
+          const data = await res.json().catch(() => ({}));
+          const detail = Array.isArray(data.errors) ? data.errors.map((x) => x.message).join(', ') : '';
+          say(detail || 'Something went wrong. Please email me directly instead.', false);
+        }
+      } catch (err) {
+        say('Could not reach the server. Please email me directly instead.', false);
+      } finally {
+        submit.disabled = false;
+        submit.textContent = original;
+      }
+    });
+  }
+
   /* ---- Lightbox -------------------------------------------------------- */
   const items = Array.from(document.querySelectorAll('[data-lightbox]'));
   if (!items.length) return;
