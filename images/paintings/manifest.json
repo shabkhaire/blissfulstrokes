@@ -2,7 +2,7 @@
  {
   "slug": "cherry-blossom-path",
   "title": "Cherry Blossom Path",
-  "medium": "Acrylic on canvas",
+  "medium": "Acrylic on paper",
   "series": "landscape",
   "w": 2000,
   "h": 1425,
@@ -29,10 +29,10 @@
   "medium": "Acrylic on canvas",
   "series": "landscape",
   "w": 2000,
-  "h": 1529,
-  "ratio": 1.308,
+  "h": 1506,
+  "ratio": 1.328,
   "src": "The Barn.JPG",
-  "cropped": false,
+  "cropped": true,
   "before": "4846x3705"
  },
  {
@@ -57,7 +57,8 @@
   "ratio": 0.991,
   "src": "1.jpg",
   "cropped": true,
-  "before": "6000x6000"
+  "before": "6000x6000",
+  "status": "Sold"
  },
  {
   "slug": "autumn-sunset",
@@ -69,7 +70,8 @@
   "ratio": 1.004,
   "src": "3.jpg",
   "cropped": true,
-  "before": "6000x6000"
+  "before": "6000x6000",
+  "status": "Sold"
  },
  {
   "slug": "birches-at-dusk",
@@ -81,19 +83,8 @@
   "ratio": 1.006,
   "src": "2.jpg",
   "cropped": true,
-  "before": "6000x6000"
- },
- {
-  "slug": "blossom-lane",
-  "title": "Blossom Lane",
-  "medium": "Acrylic on canvas",
-  "series": "landscape",
-  "w": 2000,
-  "h": 1425,
-  "ratio": 1.404,
-  "src": "10.jpg",
-  "cropped": true,
-  "before": "6000x4800"
+  "before": "6000x6000",
+  "status": "Sold"
  },
  {
   "slug": "the-lighthouse",
@@ -110,7 +101,7 @@
  {
   "slug": "spring-bridge",
   "title": "Spring Bridge",
-  "medium": "Oil on canvas",
+  "medium": "Acrylic on canvas",
   "series": "landscape",
   "w": 2000,
   "h": 1580,
@@ -122,7 +113,7 @@
  {
   "slug": "october-glow",
   "title": "October Glow",
-  "medium": "Oil on canvas",
+  "medium": "Acrylic on canvas",
   "series": "landscape",
   "w": 1318,
   "h": 1027,
@@ -141,7 +132,8 @@
   "ratio": 1.271,
   "src": "winter wonderland.jpg",
   "cropped": false,
-  "before": "1466x1153"
+  "before": "1466x1153",
+  "status": "Sold"
  },
  {
   "slug": "stone-bridge",
@@ -153,7 +145,8 @@
   "ratio": 1.268,
   "src": "DSC_0718.JPG",
   "cropped": false,
-  "before": "1600x1262"
+  "before": "1600x1262",
+  "status": "Sold"
  },
  {
   "slug": "bluebell-wood",
@@ -165,7 +158,8 @@
   "ratio": 1.467,
   "src": "PicsArt_06-09-10.21.28.jpg",
   "cropped": false,
-  "before": "2470x1683"
+  "before": "2470x1683",
+  "status": "Sold"
  },
  {
   "slug": "two-chairs",
@@ -177,7 +171,8 @@
   "ratio": 1.314,
   "src": "IMG-20250804-WA0005.jpg",
   "cropped": false,
-  "before": "1340x1020"
+  "before": "1340x1020",
+  "status": "Sold"
  },
  {
   "slug": "brothers",
@@ -206,7 +201,7 @@
  {
   "slug": "unheard-voices",
   "title": "Unheard Voices",
-  "medium": "Acrylic on canvas",
+  "medium": "Aqua oil on canvas",
   "series": "figure",
   "w": 2000,
   "h": 1569,
@@ -230,7 +225,7 @@
  {
   "slug": "inner-world",
   "title": "Inner World",
-  "medium": "Mixed media on paper",
+  "medium": "Acrylic on canvas",
   "series": "figure",
   "w": 1555,
   "h": 2000,
@@ -240,33 +235,9 @@
   "before": "2094x2694"
  },
  {
-  "slug": "pitcher-and-plums",
-  "title": "Pitcher and Plums",
-  "medium": "Soft pastel on paper",
-  "series": "figure",
-  "w": 2000,
-  "h": 1468,
-  "ratio": 1.362,
-  "src": "IMG_20170524_185915 (1).jpg",
-  "cropped": false,
-  "before": "3013x2212"
- },
- {
-  "slug": "bee-eaters",
-  "title": "Bee-eaters",
-  "medium": "Soft pastel on paper",
-  "series": "figure",
-  "w": 2000,
-  "h": 1330,
-  "ratio": 1.504,
-  "src": "DSC_0699.JPG",
-  "cropped": false,
-  "before": "6016x4000"
- },
- {
   "slug": "geese-family",
   "title": "Geese Family",
-  "medium": "Watercolour on paper",
+  "medium": "Aqua oil on canvas",
   "series": "figure",
   "w": 1576,
   "h": 2000,
@@ -580,9 +551,9 @@
   "title": "Moon",
   "medium": "Acrylic on canvas",
   "series": "abstract",
-  "w": 1217,
-  "h": 823,
-  "ratio": 1.479,
+  "w": 916,
+  "h": 908,
+  "ratio": 1.009,
   "src": "Love pallete/moon.jpg",
   "cropped": true,
   "before": "1217x941"

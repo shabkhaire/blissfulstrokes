@@ -13,7 +13,6 @@ contact.html        Contact form + email
 assets/css/style.css
 assets/js/main.js   Nav, scroll reveal, lightbox
 images/             Artwork goes here
-files/              Artist CV PDF goes here
 CNAME               www.blissfulstrokes.com  (do not delete — GitHub Pages reads this)
 ```
 
@@ -32,7 +31,6 @@ Filenames the site expects:
 | Hero (full-width, wide crop) | `images/hero/hero.jpg` |
 | Portrait of the artist | `images/portrait.jpg` |
 | Paintings | `images/paintings/painting-01.jpg` … `painting-12.jpg` |
-| Artist CV | `files/shabari-khaire-artist-cv.pdf` |
 
 The first six paintings are the ones shown on the home page.
 
