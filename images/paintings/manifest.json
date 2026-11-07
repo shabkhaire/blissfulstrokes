@@ -629,5 +629,53 @@
   "src": "DSC_1144.JPG",
   "cropped": false,
   "before": "5811x3940"
+ },
+ {
+  "slug": "cat-1",
+  "title": "Cat 1",
+  "medium": "Oil on canvas",
+  "series": "figure",
+  "w": 1600,
+  "h": 1578,
+  "ratio": 1.014,
+  "src": "cat 1.jpeg",
+  "cropped": false,
+  "before": "1600x1578"
+ },
+ {
+  "slug": "cat-2",
+  "title": "Cat 2",
+  "medium": "Oil on canvas",
+  "series": "figure",
+  "w": 1564,
+  "h": 1600,
+  "ratio": 0.978,
+  "src": "cat 2.jpeg",
+  "cropped": false,
+  "before": "1564x1600"
+ },
+ {
+  "slug": "lilies-and-candlelight",
+  "title": "Lilies and Candlelight",
+  "medium": "Oil on canvas",
+  "series": "figure",
+  "w": 1263,
+  "h": 1600,
+  "ratio": 0.789,
+  "src": "Still Life.jpeg",
+  "cropped": false,
+  "before": "1263x1600"
+ },
+ {
+  "slug": "cozy-cottage",
+  "title": "Cozy Cottage",
+  "medium": "Watercolour and ink on paper",
+  "series": "watercolour",
+  "w": 961,
+  "h": 1433,
+  "ratio": 0.671,
+  "src": "Cozy Cottage.jpeg",
+  "cropped": false,
+  "before": "961x1433"
  }
 ]
